@@ -12,8 +12,10 @@ function App() {
   const addValue =  () => {
     console.log("value Added" , Math.random())
     if(counter !== 20){
-      counter = counter + 1
-    setCounter(counter)
+      // counter = counter + 1
+
+      // setCounter(counter + 1) // this is not the correct way to update the state because it may not give the latest value of counter due to asynchronous nature of state updates in React. Instead, we should use the functional form of setCounter to ensure we are working with the most recent state.
+    setCounter((prevCounter) => prevCounter + 1)
     }
   }
 
