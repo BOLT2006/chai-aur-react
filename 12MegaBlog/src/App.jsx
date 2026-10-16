@@ -1,18 +1,38 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import "./App.css";
+import auth from "./appwrite/auth.js";
+import { login, logout } from "./store/authSlice.js";
+import { Footer, Header } from "./components/index.js";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
 
-  console.log(import.meta.env.VITE_REACT_APP_APPWRITE_URL)
+  useEffect(() => {
+    authService
+      .getCurrentUser()
+      .then((userData) => {
+        if (userData) {
+          dispatch(login(userData));
+        } else {
+          dispatch(logout());
+        }
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
-  return (
-    <>
-    <h1> A blog app with appwrite</h1>
-    </>
-  )
+ return !loading ? (
+    <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
+      <div className="w-full block">
+        <Header/>
+        <main>
+          // Your main content goes here
+        </main>
+        <Footer/>
+        </div>
+      </div>
+ ) : null
 }
 
-export default App
+export default App;
