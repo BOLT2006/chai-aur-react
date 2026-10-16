@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { useDispatch } from "react-redux";
 import "./App.css";
 import auth from "./appwrite/auth.js";
+import authService from "./appwrite/auth.js";
 import { login, logout } from "./store/authSlice.js";
 import { Footer, Header } from "./components/index.js";
+import {Outlet} from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
