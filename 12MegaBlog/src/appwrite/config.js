@@ -129,6 +129,14 @@ export class Service {
         return false;
       }
     }
+
+    // get file preview URL from a bucket
+    getFilePreview(fileId) {
+        return this.bucket.getFilePreview(
+          conf.appwriteBucketId,
+          fileId
+        );
+    }
 }
 
 const service = new Service();
