@@ -1,19 +1,15 @@
 import React from "react";
+import Product from "./components/Product";
 
 const App = () => {
-  const name = "YASH SATHE";
-  const employee = {
-    name: "Yash",
-    email: "qwerty234@gmail.com",
-  };
+  const obj = {
+    processor : "A-9 chip",
+    Battery : "5000mh"
+  }
   return (
     <>
-      <div>
-        <h1>Hello</h1>
-        <h1>{name}</h1>
-        <h1>{2 + 2 + 2}</h1>
-        <h1>{employee.email}</h1>
-      </div>
+      <Product name="Iphone -15" price={70000} color="Black" obj = {obj} />
+      <Product name="Iphone -16" price={70000} color="White" />
     </>
   );
 };
