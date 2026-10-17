@@ -6,7 +6,7 @@ const Product = ({name , price , color , obj = {}}) => {
       <h1> Brand : {name}</h1>
       <h3>Price : {price}</h3>
       <h3>Color : {color}</h3>
-      <h3>Processor : {obj.processor}</h3>
+      {obj.processor && <h3>Processor : {obj.processor}</h3>}
     </div>
   )
 }
