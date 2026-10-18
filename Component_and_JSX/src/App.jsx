@@ -3,6 +3,7 @@ import Product from "./components/Product";
 import Item from "./components/Item";
 import Event from "./components/Event";
 import UseState from "./components/UseState";
+import Map from "./components/Map";
 
 const App = () => {
   const obj = {
@@ -15,7 +16,8 @@ const App = () => {
       <Product name="Iphone -16" price={70000} color="White" />
       <Item/> */}
       {/* <Event/> */}
-      <UseState/>
+      {/* <UseState/> */}
+      <Map/>
     </>
   );
 };
