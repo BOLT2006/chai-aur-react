@@ -5,6 +5,7 @@ import Event from "./components/Event";
 import UseState from "./components/UseState";
 import Map from "./components/Map";
 import Filter from "./components/Filter";
+import UseEffect from "./components/UseEffect";
 
 const App = () => {
   const obj = {
@@ -19,7 +20,8 @@ const App = () => {
       {/* <Event/> */}
       {/* <UseState/> */}
       {/* <Map/> */}
-      <Filter/>
+      {/* <Filter/> */}
+      <UseEffect/>
     </>
   );
 };
