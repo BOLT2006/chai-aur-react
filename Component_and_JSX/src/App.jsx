@@ -7,6 +7,7 @@ import Map from "./components/Map";
 import Filter from "./components/Filter";
 import UseEffect from "./components/UseEffect";
 import FetchData from "./components/FetchData";
+import Form_Handling from "./components/Form_Handling";
 
 const App = () => {
   const obj = {
@@ -23,7 +24,8 @@ const App = () => {
       {/* <Map/> */}
       {/* <Filter/> */}
       {/* <UseEffect/> */}
-      <FetchData/>
+      {/* <FetchData/> */}
+      <Form_Handling/>
     </>
   );
 };
