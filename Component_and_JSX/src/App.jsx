@@ -6,6 +6,7 @@ import UseState from "./components/UseState";
 import Map from "./components/Map";
 import Filter from "./components/Filter";
 import UseEffect from "./components/UseEffect";
+import FetchData from "./components/FetchData";
 
 const App = () => {
   const obj = {
@@ -21,7 +22,8 @@ const App = () => {
       {/* <UseState/> */}
       {/* <Map/> */}
       {/* <Filter/> */}
-      <UseEffect/>
+      {/* <UseEffect/> */}
+      <FetchData/>
     </>
   );
 };
