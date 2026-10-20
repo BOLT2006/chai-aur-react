@@ -1,6 +1,7 @@
 import React, { use } from 'react'
-import {data, useParams} from 'react-router-dom'
+import {data, useNavigate, useParams} from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+import './Button.css'
 
 const Dynamic_User = () => {
   // console.log("UseParams = " , useParams())
@@ -45,14 +46,20 @@ const Dynamic_User = () => {
   // console.log(useLocation())
 
   const location = useLocation();
+
+  //useNavigate
+  const navigate = useNavigate()
   
   return (
     <div>
       <h1>Name = {specificUser.name}</h1>
       <h1>id = {specificUser.gmail}</h1>
 
-      //use of useLocation
       {location.pathname == "/user/3" && <div><h1>Hello user</h1></div>}
+
+      <div>
+        <button className="btn" onClick={() => navigate('/home')}> Go to home</button>
+      </div>
     </div>
   )
 }
