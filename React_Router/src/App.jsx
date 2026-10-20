@@ -6,6 +6,7 @@ import Contact from './Pages/Contact'
 import Navbar from './components/Navbar'
 import User from './Pages/User'
 import Dynamic_User from './Pages/Dynamic_User'
+import Nav from './components/Nav'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,8 @@ function App() {
     <Router>
 
      
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Nav/>
       
       <Routes>
 
