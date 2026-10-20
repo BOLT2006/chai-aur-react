@@ -1,0 +1,71 @@
+/* Global styles - replace the default Vite index.css with this */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #1a1a1a;
+  color: #e5e5e5;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared page layout used by Home / About / Contact */
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  text-align: center;
+  animation: page-in 0.5s ease both;
+}
+
+.page h1 {
+  margin: 0 0 16px;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, #ffffff, #8e8e8e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.page p {
+  margin: 0 auto;
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #9a9a9a;
+}
+
+.card {
+  margin-top: 32px;
+  padding: 24px;
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  text-align: left;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page {
+    animation: none;
+  }
+}
