@@ -1,11 +1,11 @@
 import React from 'react'
 import StateGov from './StateGov'
 
-const IndianGov = () => {
+const IndianGov = ({money}) => {
   return (
     <div>
       <h1>Indian Gov Component</h1>
-      <StateGov/>
+      <StateGov money = {money}/>
     </div>
   )
 }

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import IndianGov from './components/IndianGov'
 
 const App = () => {
+  const money = 1000; 
   return (
     <div>
-      <IndianGov/>
+      <IndianGov money = {money}/>
     </div>
   )
 }

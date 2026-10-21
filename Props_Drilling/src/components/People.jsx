@@ -1,9 +1,10 @@
 import React from 'react'
 
-const People = () => {
+const People = ({money}) => {
   return (
     <div>
-      <h1>Welcome to Peole Component</h1>
+      <h1>Welcome to Peole Component : {money}</h1>
+      
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import Block from './Block'
 
-const District = () => {
+const District = ({money}) => {
   return (
     <div>
       <h1>District Gov Component</h1>
-      <Block/>
+      <Block money = {money}/>
     </div>
   )
 }
