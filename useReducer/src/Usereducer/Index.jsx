@@ -9,6 +9,9 @@ const counterReducer = (state, action) => {
     case "Decrement":
       return { counter: state.counter - 1 };
 
+    case "Reset" :
+        return {counter : state.counter = 0};
+
     default:
       break;
   }
@@ -22,6 +25,8 @@ const Index = () => {
     <button onClick={() => dispatch({type : "Increment"})}>Increase</button>
     <br />
     <button onClick={() => dispatch({type : "Decrement"})}>Decrease</button>
+    <br />
+    <button onClick={() => dispatch({type : "Reset"})}>Reset</button>
   </div>;
 };
 
